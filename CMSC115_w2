@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Exercise02_21 {
+
+	public static void main(String[] args) {
+		/** Declare Variables
+		 * investmentAmount= investment amount, annualInterestRate= annual interest rate 
+		 * numberOfYears= number of years, futureInvestmentValue= future investment value
+		 */
+		
+		/*import scanner
+		 * tracker= scanner
+		 */
+	
+		Scanner tracker = new Scanner(System.in);
+		
+		System.out.print("Enter annual interest amount: ");
+		double investmentAmount = tracker.nextDouble(); 
+		
+		
+		System.out.print("Enter annual interest rate: ");
+		double annualInterestRate = tracker.nextDouble();
+		
+		double monthlyInterestRate = annualInterestRate / 1200; 
+		
+		System.out.print("Enter number of years: ");
+		int numberOfYears = tracker.nextInt();
+		
+		double futureInvestmentValue = 
+				investmentAmount * Math.pow(1+ monthlyInterestRate, numberOfYears * 12); 
+		
+		System.out.print("Future value is " + (int)(futureInvestmentValue * 100) / 100.0);
+
+	}
+
+}
