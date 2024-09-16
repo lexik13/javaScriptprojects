@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class Exercise03_11 {
+
+	public static void main(String[] args) {
+		
+		//Create a scanner
+		Scanner tracker = new Scanner(System.in); 
+		
+		// User prompt for month and year 
+		
+		System.out.print("Enter a month in the year (e.g., 1 for Jan): ");
+		byte month =  Byte.parseByte(tracker.nextLine());
+		System.out.print("\nEnter a year: ");
+		int year = Integer.parseInt(tracker.nextLine()); 
+		
+		if(month <= 12 && month >=1 && year >=1) {
+			
+			switch(month) {
+			case 1 : 
+				System.out.print("January " + year + " has " + 31 + " days ");
+				break;
+			case 2 : //creating a boolean statement for leap years
+				if ((year%4 == 0 && year%100 !=0) || (year%400 == 0))
+					System.out.print("Feruary " + year + " has " + 29 + " days ");
+				else
+					System.out.print("January " + year + " has " + 28 + " days ");
+				break;
+			case 3 : 
+				System.out.print("March " + year + " has " + 31 + " days ");
+				break;
+			case 4 : 
+				System.out.print("April " + year + " has " + 30 + "days ");
+				break;
+			case 5 : 
+				System.out.print("May " + year + " has " + 31 + " days ");
+				break;
+			case 6 :
+				System.out.print("June " + year + " has " + 30 + " days ");
+				break;
+			case 7 : 
+				System.out.print("July " + year + " has " + 31 + " days ");
+				break;
+			case 8 : 
+				System.out.print("August " + year + " has " + 31 + " days ");
+				break;
+			case 9 : 
+				System.out.print("September " + year + " has " + 30 + " days ");
+				break;
+			case 10 : 
+				System.out.print("October " + year + " has " + 31 + " days ");
+				break;
+			case 11 : 
+				System.out.print("November " + year + " has " + 30 + " days ");
+				break;
+			case 12 : 
+				System.out.print("December " + year + " has " + 31 + " days ");
+				break; 
+			default : 
+			
+			}
+		}
+		
+		
+		
+		
+		//
+		tracker.close();
+
+	}
+
+}
